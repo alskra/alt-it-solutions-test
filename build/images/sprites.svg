@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<symbol id="arror-view" viewBox="0 0 55 47">
+	<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="5" d="M31.701 43.737L51.943 23.5 31.7 3.263M51.951 23.5H3.371"/>
+</symbol>
+<symbol id="arrow-left" viewBox="0 0 13 11">
+	<path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.446 1L1.001 5.444 5.446 9.89M1 5.445h10.669"/>
+</symbol>
+<symbol id="check" viewBox="0 0 11 8">
+	<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 1L3.812 7 1 4.273"/>
+</symbol>
+<symbol id="close" viewBox="0 0 16 16">
+	<path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2 2l11.886 11.886M2.48 14L14.366 2.114"/>
+</symbol>
+</svg>
