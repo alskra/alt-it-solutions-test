@@ -80,3 +80,11 @@
 		font-family: "object-fit: #{$fit}";
 	}
 }
+
+@mixin line-clamp($number) {
+	// stylelint-disable
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: $number;
+	// stylelint-enable
+}

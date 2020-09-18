@@ -14,11 +14,11 @@
 		padding-top: percentage(296 / 409);
 	}
 
-	@include hover {
+	&:hover {
 		#{$r}__overlay {
 			opacity: 1;
 			visibility: visible;
-			transition-delay: 0.1s;
+			transition-delay: 0.1s, 0s;
 		}
 	}
 
@@ -41,13 +41,14 @@
 		display: flex;
 		flex-flow: column;
 		border-radius: inherit;
-		padding: 17px 25px;
+		padding: 17px vcalc(25, 20);
 		width: 100%;
 		height: 100%;
 		background: rgba($color-primary, 0.5);
 	}
 
 	&__category {
+		flex: none;
 		align-self: flex-start;
 		overflow: hidden;
 		margin-right: auto;
@@ -64,23 +65,28 @@
 	}
 
 	&__title {
+		@include line-clamp(2);
+
+		flex: none;
 		overflow: hidden;
-		max-height: 1.3em * 3;
+		margin: 0;
+		max-height: 1.3em * 2;
 		font-weight: 700;
-		font-size: 24px;
+		font-size: vcalc(24, 20);
 		line-height: 1.3;
 	}
 
 	&__footer {
 		display: flex;
+		flex: none;
 		align-items: flex-end;
 		margin-top: auto;
-		padding-top: 20px;
+		padding-top: 15px;
 	}
 
 	&__duration {
 		margin-bottom: 3px;
-		font-size: 15px;
+		font-size: vcalc(15, 14);
 		line-height: (18 / 15);
 		color: rgba($color-white, 0.8);
 
@@ -93,9 +99,9 @@
 
 	&__price {
 		margin-left: auto;
-		padding-left: 20px;
+		padding-left: 15px;
 		font-weight: 500;
-		font-size: 26px;
+		font-size: vcalc(26, 22);
 		line-height: (34 / 26);
 	}
 
@@ -103,14 +109,53 @@
 		position: absolute;
 		left: 0;
 		top: 0;
+		display: flex;
+		flex-flow: column;
 		border-radius: inherit;
+		padding: vcalc(30, 20) vcalc(25, 20);
 		width: 100%;
 		height: 100%;
+		font-weight: 500;
+		font-size: vcalc(15, 14);
+		line-height: (20 / 15);
+		text-decoration: none;
+		color: rgba($color-white, 0.8);
 		background: rgba($color-blue-zodiac, 0.8);
 		opacity: 0;
 		visibility: hidden;
 		transition: opacity, visibility;
 		transition-duration: $duration-normal;
 		backdrop-filter: blur(20px);
+	}
+
+	&__button {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		border-radius: 27.5px;
+		padding: 0 20px;
+		width: 227px;
+		height: 55px;
+		max-width: 100%;
+		font-weight: 500;
+		line-height: 1.3;
+		color: $color-white;
+		background: $color-tall-poppy;
+		transition: background-color $duration-normal;
+
+		@include hover {
+			background-color: lighten($color-tall-poppy, 10);
+		}
+	}
+
+	&__details {
+		align-self: center;
+		margin: auto auto 0;
+		padding-top: 15px;
+		max-width: 100%;
+		text-decoration: underline;
 	}
 }

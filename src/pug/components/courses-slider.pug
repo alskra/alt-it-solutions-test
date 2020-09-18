@@ -9,3 +9,12 @@ mixin courses-slider(data = [])
 
 		.courses-slider__footer
 			.courses-slider__pagination(data-target="courses-slider.pagination")
+			.courses-slider__nav
+				+button({icon: 'arrow-left'}).courses-slider__button(
+					type="button"
+					data-target="courses-slider.buttonPrev"
+				)
+				+button({icon: 'arrow-left'}).courses-slider__button(
+					type="button"
+					data-target="courses-slider.buttonNext"
+				)

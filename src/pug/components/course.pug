@@ -1,5 +1,5 @@
 mixin course({category, title, duration, price, image} = {})
-	a.course(href="" title!=title)&attributes(attributes)
+	div.course&attributes(attributes)
 		img.course__image(
 			src=baseDir + image.src
 			srcset=`${baseDir + image.srcset} 2x`
@@ -7,10 +7,14 @@ mixin course({category, title, duration, price, image} = {})
 		)
 		.course__body
 			.course__category!= category
-			.course__title!= title
+			h3.course__title!= title
 			.course__footer
 				.course__duration
 					div Гибкие сроки обучения
 					div!= duration
 				.course__price!=price
-		.course__overlay
+		a.course__overlay(href="" title!=title)
+			+button().course__button(type="button")
+				| Начать обучение
+			.course__details
+				| Подробнее о&nbsp;программе
