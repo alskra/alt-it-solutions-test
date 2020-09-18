@@ -6,7 +6,14 @@ mixin courses-slider(data = [])
 					each item in data
 						.swiper-slide
 							+course(item)
-
+					if data.length
+						.swiper-slide
+							a.courses-slider__view(href="")
+								.courses-slider__view-body
+									.courses-slider__view-icon
+										+svg('arror-view')
+									.courses-slider__view-text
+										| Смотреть все
 		.courses-slider__footer
 			.courses-slider__pagination(data-target="courses-slider.pagination")
 			.courses-slider__nav
