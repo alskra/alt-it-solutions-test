@@ -12,4 +12,11 @@
 	@include hover {
 		background: $color-primary-hover;
 	}
+
+	&--lg {
+		border-radius: 35px;
+		padding: 0 35px;
+		height: 50px;
+		font-size: 15px;
+	}
 }

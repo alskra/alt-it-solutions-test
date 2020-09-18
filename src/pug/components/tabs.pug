@@ -4,7 +4,7 @@ mixin tabs(data = [])
 			.tabs__nav-overflow
 				each item in data
 					+button().tabs__nav-item(
-						type='button'
+						type="button"
 						data-target="tabs.navItem"
 						data-action="tabs#doActive"
 					)!= item.title

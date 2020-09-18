@@ -1,0 +1,4 @@
+mixin label({title} = {})
+	label.label&attributes(attributes)
+		span.label__text!= title
+		block

@@ -1,5 +1,5 @@
 mixin course({category, title, duration, price, image} = {})
-	div.course&attributes(attributes)
+	.course&attributes(attributes)
 		img.course__image(
 			src=baseDir + image.src
 			srcset=`${baseDir + image.srcset} 2x`
@@ -12,9 +12,9 @@ mixin course({category, title, duration, price, image} = {})
 				.course__duration
 					div Гибкие сроки обучения
 					div!= duration
-				.course__price!=price
+				.course__price!= price
 		a.course__overlay(href="" title!=title)
-			+button().course__button(type="button")
+			+button().course__button(type="button" data-modal-id="modal-request")
 				| Начать обучение
 			.course__details
 				| Подробнее о&nbsp;программе

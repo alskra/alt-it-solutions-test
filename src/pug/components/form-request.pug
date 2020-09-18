@@ -1,0 +1,39 @@
+mixin form-request()
+	form.form-request&attributes(attributes)
+		.form-request__grid
+			.form-request__col
+				+label({title: 'Введите ФИО*:'})
+					+field().form-request__field(
+						name="first-name"
+						required
+					)
+
+			.form-request__col
+				+label({title: 'Номер телефона*:'})
+					+field().form-request__field(
+						type="tel"
+						name="tel"
+						required
+					)
+
+			.form-request__col
+				+label({title: 'E-mail*:'})
+					+field().form-request__field(
+						type="email"
+						name="email"
+						required
+					)
+
+		.form-request__footer
+			.form-request__footer-col
+				.form-request__agreement
+					.form-request__agreement-icon
+						+svg('check')
+					.form-request__agreement-text.
+						Нажимая на&nbsp;кнопку &laquo;Сохранить&raquo; вы&nbsp;подтверждаете что #[span.nowrap ознакомлен(-ы)]
+						с&nbsp;#[a(href="" target="_blank") политикой конфиденциальности] и&nbsp;даёте согласие
+						на&nbsp;обработку персональных данных согласно ФЗ &#8470;&nbsp;54
+
+			.form-request__footer-col
+				+button-primary({type: 'lg'})(type="submit")
+					| Отправить

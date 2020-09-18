@@ -1,5 +1,8 @@
 mixin button({tag = 'button', icon} = {})
-	#{tag}.button(role=tag !== 'button' ? 'button' : null)&attributes(attributes)
+	#{tag}.button(
+		type=tag === 'button' ? 'button' : null
+		role=tag !== 'button' ? 'button' : null
+	)&attributes(attributes)
 		if icon
 			+svg(icon).button__icon
 		if block

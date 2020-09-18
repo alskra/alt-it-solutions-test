@@ -6,5 +6,4 @@ import {definitionsFromContext} from 'stimulus/webpack-helpers';
 const app = Application.start();
 const context = require.context('./components', true, /\.js$/);
 app.load(definitionsFromContext(context));
-
-console.log(context.keys());
+window.app = app;

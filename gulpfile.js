@@ -330,7 +330,7 @@ gulp.task('optimize:images', () => {
 			}),
 			$.imageminMozjpeg({
 				progressive: true,
-				quality: 80,
+				quality: 90,
 			}),
 		]))
 		.pipe(gulp.dest('src/images'));
@@ -415,6 +415,7 @@ gulp.task('zip', () => {
 		'build/**',
 		'src/**',
 		'.babelrc',
+		'.browserslistrc',
 		'.editorconfig',
 		'.eslintignore',
 		'.eslintrc',

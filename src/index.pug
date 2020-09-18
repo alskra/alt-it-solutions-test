@@ -4,7 +4,9 @@ prepend vars
 	- title = 'ALT IT Solutions Test';
 
 append vars
-	- body.classList.push('page');
+	-
+		baseDir = './';
+		body.classList.push('page');
 
 append head-end
 	script
@@ -92,3 +94,5 @@ block content
 						content: 6,
 					},
 				])
+
+	+modal({type: 'request', title: 'Оставить заявку на&nbsp;обучение проектных команд'})#modal-request

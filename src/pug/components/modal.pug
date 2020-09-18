@@ -1,0 +1,14 @@
+mixin modal({type, title} = {})
+	.modal(
+		class={[`modal--${type}`]: type}
+		data-controller="modal"
+		data-modal-opened="false"
+	)&attributes(attributes)
+		.modal__overlay
+		.modal__frame
+			.modal__body
+				.modal__header
+					+button({icon: 'close'}).modal__button-close(data-action="modal#close")
+					.modal__title!= title
+				.modal__main
+					+form-request()

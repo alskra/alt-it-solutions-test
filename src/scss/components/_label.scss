@@ -1,0 +1,9 @@
+.label {
+	&__text {
+		display: inline-block;
+		margin-bottom: 10px;
+		font-size: 15px;
+		line-height: (20 / 15);
+		color: $color-biscay-2;
+	}
+}
