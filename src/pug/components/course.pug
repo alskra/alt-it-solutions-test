@@ -1,0 +1,16 @@
+mixin course({category, title, duration, price, image} = {})
+	a.course(href="" title!=title)&attributes(attributes)
+		img.course__image(
+			src=baseDir + image.src
+			srcset=`${baseDir + image.srcset} 2x`
+			alt!=title
+		)
+		.course__body
+			.course__category!= category
+			.course__title!= title
+			.course__footer
+				.course__duration
+					div Гибкие сроки обучения
+					div!= duration
+				.course__price!=price
+		.course__overlay

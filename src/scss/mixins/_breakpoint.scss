@@ -1,31 +1,19 @@
-@mixin desktop {
-	@media (min-width: 1025px) {
+@mixin media-breakpoint-up($breakpoint) {
+	@if type-of($breakpoint) == "string" {
+		$breakpoint: map-get($breakpoints, $breakpoint);
+	}
+
+	@media (min-width: $breakpoint) {
 		@content;
 	}
 }
 
-@mixin laptop {
-	// change the values for the situation
-	@media (min-width: 1025px) and (max-width: 1599px) {
-		@content;
+@mixin media-breakpoint-down($breakpoint) {
+	@if type-of($breakpoint) == "string" {
+		$breakpoint: map-get($breakpoints, $breakpoint);
 	}
-}
 
-@mixin desktop-xl {
-	// change the values for the situation
-	@media (min-width: 1600px) {
-		@content;
-	}
-}
-
-@mixin laptop-h {
-	@media (min-width: 1025px) and (max-height: 779px) {
-		@content;
-	}
-}
-
-@mixin mobile {
-	@media (max-width: 1024px) {
+	@media (max-width: $breakpoint - 0.02) {
 		@content;
 	}
 }

@@ -1,0 +1,4 @@
+mixin button({tag = 'button'} = {})
+	#{tag}.button(role=tag !== 'button' ? 'button' : null)&attributes(attributes)
+		span.button__text
+			block

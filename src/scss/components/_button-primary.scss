@@ -1,0 +1,15 @@
+.button-primary {
+	border-radius: 25px;
+	padding: 0 23px;
+	height: 40px;
+	font-weight: 500;
+	font-size: 14px;
+	color: $color-white;
+	background: $color-primary;
+	transition: color, background-color;
+	transition-duration: $duration-normal;
+
+	@include hover {
+		background: $color-primary-hover;
+	}
+}

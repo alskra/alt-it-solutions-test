@@ -1,0 +1,18 @@
+mixin tabs(data = [])
+	.tabs(data-controller="tabs" data-tabs-index="0")&attributes(attributes)
+		.tabs__nav
+			.tabs__nav-overflow
+				each item in data
+					+button().tabs__nav-item(
+						type='button'
+						data-target="tabs.navItem"
+						data-action="tabs#doActive"
+					)!= item.title
+
+		.tabs__frames
+			each item in data
+				.tabs__frame(data-target="tabs.frame")
+					if item.content.coursesSlider
+						+courses-slider(item.content.coursesSlider)
+					else
+						!= item.content

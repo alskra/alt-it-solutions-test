@@ -1,1 +1,6 @@
 // stylelint-disable no-empty-source
+@include font-face("../fonts/SF UI Display/SFUIDisplay-Light", "SF UI Display", 300, normal);
+@include font-face("../fonts/SF UI Display/SFUIDisplay-Regular", "SF UI Display", 400, normal);
+@include font-face("../fonts/SF UI Display/SFUIDisplay-Medium", "SF UI Display", 500, normal);
+@include font-face("../fonts/SF UI Display/SFUIDisplay-Semibold", "SF UI Display", 600, normal);
+@include font-face("../fonts/SF UI Display/SFUIDisplay-Bold", "SF UI Display", 700, normal);

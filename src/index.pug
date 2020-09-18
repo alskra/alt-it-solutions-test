@@ -6,5 +6,89 @@ prepend vars
 append vars
 	- body.classList.push('page');
 
+append head-end
+	script
+		| window.MSInputMethodContext && document.documentMode && document.write('<script src="https://cdn.jsdelivr.net/gh/nuxodin/ie11CustomProperties@4.1.0/ie11CustomProperties.min.js"><\x2fscript>')
+
 block content
-	//-
+	section.section
+		.container
+			header.section__header
+				.section__header-grid
+					.section__header-col
+						h2.section__title
+							| Программы обучения
+					.section__header-col
+						+button-primary({tag: 'a'})(href="")
+							| Больше программ
+
+			.section__main
+				+tabs([
+					{
+						title: 'Популярные',
+						content: {
+							coursesSlider: [
+								{
+									category: 'Курс',
+									title: 'Концессия и&nbsp;ГЧП: базовый курс',
+									duration: '7&nbsp;акад. часов',
+									price: '9&nbsp;900&nbsp;₽',
+									image: {
+										src: 'images/courses/desk_laptop_typing.jpg',
+										srcset: 'images/courses/desk_laptop_typing@2x.jpg',
+									},
+								},
+								{
+									category: 'Курс',
+									title: 'Концессия и&nbsp;ГЧП: продвинутый курс',
+									duration: '18,5&nbsp;акад. часов',
+									price: '29&nbsp;900&nbsp;₽',
+									image: {
+										src: 'images/courses/photo-of-person-holding-mobile-phone.jpg',
+										srcset: 'images/courses/photo-of-person-holding-mobile-phone@2x.jpg',
+									},
+								},
+								{
+									category: 'Курс',
+									title: 'Реализация проектов ГЧП в&nbsp;сфере здравоохранения',
+									duration: '1,4&nbsp;акад. часа',
+									price: '2&nbsp;900&nbsp;₽',
+									image: {
+										src: 'images/courses/shutterstock_217218478.jpg',
+										srcset: 'images/courses/shutterstock_217218478@2x.jpg',
+									},
+								},
+								{
+									category: 'Курс',
+									title: 'Концессия и&nbsp;ГЧП: базовый курс',
+									duration: '7&nbsp;акад. часов',
+									price: '9&nbsp;900&nbsp;₽',
+									image: {
+										src: 'images/courses/desk_laptop_typing.jpg',
+										srcset: 'images/courses/desk_laptop_typing@2x.jpg',
+									},
+								},
+							]
+						},
+					},
+					{
+						title: 'Бесплатные программы',
+						content: 2,
+					},
+					{
+						title: 'Онлайн программы',
+						content: 3,
+					},
+					{
+						title: 'Для новичков',
+						content: 4,
+					},
+					{
+						title: 'Для специалистов',
+						content: 5,
+					},
+					{
+						title: 'Повышение квалификации',
+						content: 6,
+					},
+				])

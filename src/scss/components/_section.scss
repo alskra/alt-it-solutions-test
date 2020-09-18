@@ -1,0 +1,37 @@
+.section {
+	padding: vcalc(40, 30) 0;
+
+	&__header {
+		display: flex;
+		flex-flow: column;
+		margin-bottom: var(--gutter2x);
+	}
+
+	&__header-grid {
+		display: flex;
+		flex-flow: wrap;
+		align-items: flex-start;
+		margin: var(--ungutter);
+	}
+
+	&__header-col {
+		padding: var(--gutter);
+
+		&:nth-child(1) {
+			flex: 1 1 auto;
+			margin: auto 0;
+		}
+
+		&:nth-child(2) {
+			// margin-left: auto;
+		}
+	}
+
+	&__title {
+		margin: 0;
+		font-weight: 500;
+		font-size: vcalc(32, 26);
+		line-height: (38 / 32);
+		color: $color-primary;
+	}
+}

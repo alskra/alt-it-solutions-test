@@ -1,11 +1,29 @@
+:root {
+	--vmedia: 1366px;
+	--gutter: #{vcalc(35 / 2, 20 / 2)};
+	--ungutter: calc(-1 * var(--gutter));
+	--gutter2x: calc(2 * var(--gutter));
+
+	@include media-breakpoint-down(xl) {
+		--vmedia: 100vw;
+	}
+
+	@include media-breakpoint-down(lg) {
+		--vmedia: 100vmin;
+	}
+
+	@include media-breakpoint-down(320px) {
+		--vmedia: 320px;
+	}
+}
+
 *,
 *::before,
 *::after {
-	box-sizing: inherit;
+	box-sizing: border-box;
 }
 
 html {
-	box-sizing: border-box;
 	scroll-behavior: smooth;
 }
 
@@ -20,4 +38,8 @@ body {
 button:not([disabled]),
 a[role="button"]:not([disabled]) {
 	cursor: pointer;
+}
+
+:focus:not(.focus-visible) {
+	outline: none;
 }

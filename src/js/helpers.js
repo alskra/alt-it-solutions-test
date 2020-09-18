@@ -80,7 +80,7 @@ vars.getScrollbarWidth = () => {
 function hasHoverSupport() {
 	let hoverSupport;
 
-	if (vars.isIE && vars.getScrollbarWidth()) {
+	if (vars.isIE() && vars.getScrollbarWidth()) {
 		// On touch devices scrollbar width is usually 0
 		hoverSupport = true;
 	} else if (vars.isMobile()) {

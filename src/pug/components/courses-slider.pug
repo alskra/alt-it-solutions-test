@@ -1,0 +1,11 @@
+mixin courses-slider(data = [])
+	.courses-slider(data-controller="courses-slider")&attributes(attributes)
+		.courses-slider__main
+			.swiper-container(data-target="courses-slider.swiperContainer")
+				.swiper-wrapper
+					each item in data
+						.swiper-slide
+							+course(item)
+
+		.courses-slider__footer
+			.courses-slider__pagination(data-target="courses-slider.pagination")

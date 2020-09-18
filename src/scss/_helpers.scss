@@ -3,20 +3,6 @@
 	display: none !important;
 }
 
-.for-desktop {
-	@include mobile {
-		// stylelint-disable-next-line declaration-no-important
-		display: none !important;
-	}
-}
-
-.for-mobile {
-	@include desktop {
-		// stylelint-disable-next-line declaration-no-important
-		display: none !important;
-	}
-}
-
 .clearfix {
 	overflow: auto;
 
@@ -34,4 +20,11 @@
 	width: 1px;
 	height: 1px;
 	clip: rect(0 0 0 0);
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 var(--gutter2x);
+	width: 100%;
+	max-width: map-get($breakpoints, xl);
 }

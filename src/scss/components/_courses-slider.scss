@@ -1,0 +1,19 @@
+.courses-slider {
+	.swiper-container {
+		margin: 0 var(--ungutter);
+		width: auto;
+	}
+
+	.swiper-slide {
+		padding: 0 var(--gutter);
+		width: percentage(1 / 3);
+	}
+
+	&__main {
+		overflow: hidden;
+	}
+
+	&__footer {
+		margin-top: vcalc(30, 15);
+	}
+}
